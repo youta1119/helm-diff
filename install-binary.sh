@@ -8,7 +8,7 @@ export GREP_COLOR="never"
 
 HELM_MAJOR_VERSION=$(helm version --client --short | awk -F '.' '{print $1}')
 
-: ${HELM_PLUGIN_DIR:="$(helm home --debug=false)/plugins/helm-diff"}
+: ${HELM_PLUGIN_DIR:="${HELM_HOME}/plugins/helm-diff"}
 
 # Convert the HELM_PLUGIN_DIR to unix if cygpath is
 # available. This is the case when using MSYS2 or Cygwin
